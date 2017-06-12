@@ -285,17 +285,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD
-    - target: {fileID: 114513057498484524, guid: 4392fa5be0518cc4b89973c262990c16,
-        type: 2}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 1051100042}
-=======
->>>>>>> parent of b71451f... J update
-    m_RemovedComponents: []
-=======
     - target: {fileID: 0}
       propertyPath: m_IsTrigger
       value: 1
@@ -304,7 +293,6 @@ Prefab:
     - {fileID: 0}
     - {fileID: 114953536558117620, guid: 4392fa5be0518cc4b89973c262990c16, type: 2}
     - {fileID: 114513713913460696, guid: 4392fa5be0518cc4b89973c262990c16, type: 2}
->>>>>>> a6291cdb748f5ec47358956e57ece9d3912d87e1
   m_ParentPrefab: {fileID: 100100000, guid: 4392fa5be0518cc4b89973c262990c16, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1540889211
