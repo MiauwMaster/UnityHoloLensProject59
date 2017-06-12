@@ -34,17 +34,20 @@ public class Bullet : MonoBehaviour {
 		}
 
 		transform.Translate(dir.normalized * distanceThisFrame, Space.World);
-
+       
 	}
 
 	void HitTarget()
 	{
-		//Particle system for a hit
-		//GameObject effectIns = (GameObject)Instantiate(particleEffect, transform.position, transform.rotation);
-		//Destroy(effectIns, 2f);
+        //Particle system for a hit
+        //GameObject effectIns = (GameObject)Instantiate(particleEffect, transform.position, transform.rotation);
+        //Destroy(effectIns, 2f);
+
+        target.GetComponent<Enemy>().LoseLife(1);
 
 		Destroy(gameObject);
 	}
-	#endregion
+
+    #endregion
 }
 
