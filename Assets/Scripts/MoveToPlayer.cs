@@ -7,6 +7,11 @@ public class MoveToPlayer : MonoBehaviour {
     public Transform target;
     public float speed;
 
+    void Start()
+    {
+        target = Camera.main.transform;
+    }
+
     void Update()
     {
         float step = speed * Time.deltaTime;
