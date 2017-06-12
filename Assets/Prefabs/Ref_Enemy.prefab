@@ -22,11 +22,14 @@ GameObject:
   - component: {fileID: 33692070953033546}
   - component: {fileID: 23996677691149490}
 <<<<<<< HEAD
+<<<<<<< HEAD
   - component: {fileID: 114513057498484524}
 =======
   - component: {fileID: 114953536558117620}
   - component: {fileID: 114513713913460696}
 >>>>>>> a6291cdb748f5ec47358956e57ece9d3912d87e1
+=======
+>>>>>>> parent of b71451f... J update
   m_Layer: 0
   m_Name: Ref_Enemy
   m_TagString: Enemy
@@ -41,7 +44,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1786963159395922}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.22, y: 1, z: 21.68}
+  m_LocalPosition: {x: -5.54, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -87,6 +90,7 @@ MeshFilter:
   m_GameObject: {fileID: 1786963159395922}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &114513057498484524
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -100,6 +104,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   speed: 0
+=======
+>>>>>>> parent of b71451f... J update
 --- !u!136 &136509140626963182
 CapsuleCollider:
 =======
