@@ -93,8 +93,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d100c75b1d334ed4391e76140ddd8d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 10000
   isDead: 0
+  moneyAmount: 10
+  damage: 0
 --- !u!114 &114953536558117620
 MonoBehaviour:
   m_ObjectHideFlags: 1

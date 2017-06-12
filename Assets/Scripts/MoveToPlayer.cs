@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveToPlayer : MonoBehaviour {
+public class MoveToPlayer : MonoBehaviour
+{
 
     public Transform target;
     public float speed;
@@ -14,13 +15,19 @@ public class MoveToPlayer : MonoBehaviour {
 
     void Update()
     {
-        float step = speed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, target.position, step);
-
-        if (transform.position == target.position)
+        if (target != null)
         {
-            //TODO: player lose life
-            Destroy(gameObject);
+            float step = speed * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+
+            if (transform.position == target.position)
+            {
+                Camera.main.GetComponent<Player>().LoseLife(GetComponent<Enemy>().damage);
+                GetComponent<Enemy>().Die();
+                target = null;
+            }
+
         }
     }
 }
+
