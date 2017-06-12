@@ -11,6 +11,7 @@ public class Turret : MonoBehaviour {
 	[Header("Bullets Default")]
 	public float fireRate = 1f;
 	private float fireCountDown = 0f;
+    public float slowingAmount;
 
 	[Header("laser")]
 	public bool useLaser = false;
@@ -121,6 +122,7 @@ public class Turret : MonoBehaviour {
 		if(bullet != null)
 		{
 			bullet.Seek(target);
+            target.GetComponent<MoveToPlayer>().speed /= slowingAmount;
 		}
 	}
 

@@ -20,9 +20,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4356223839223604}
   - component: {fileID: 33692070953033546}
-  - component: {fileID: 136509140626963182}
   - component: {fileID: 23996677691149490}
+<<<<<<< HEAD
   - component: {fileID: 114513057498484524}
+=======
+  - component: {fileID: 114953536558117620}
+  - component: {fileID: 114513713913460696}
+>>>>>>> a6291cdb748f5ec47358956e57ece9d3912d87e1
   m_Layer: 0
   m_Name: Ref_Enemy
   m_TagString: Enemy
@@ -82,6 +86,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1786963159395922}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+<<<<<<< HEAD
 --- !u!114 &114513057498484524
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -97,14 +102,31 @@ MonoBehaviour:
   speed: 0
 --- !u!136 &136509140626963182
 CapsuleCollider:
+=======
+--- !u!114 &114513713913460696
+MonoBehaviour:
+>>>>>>> a6291cdb748f5ec47358956e57ece9d3912d87e1
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1786963159395922}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d100c75b1d334ed4391e76140ddd8d1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  isDead: 0
+--- !u!114 &114953536558117620
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1786963159395922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dacac1a3f1cd6364facfa0428aa4d2e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  speed: 0
