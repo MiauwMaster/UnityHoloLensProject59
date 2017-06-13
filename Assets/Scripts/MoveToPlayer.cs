@@ -10,7 +10,8 @@ public class MoveToPlayer : MonoBehaviour
 
     void Start()
     {
-        target = GameObject.FindGameObjectWithTag("target").transform;
+        //target = Camera.main.transform;
+        target = GameObject.FindWithTag("target").transform;
     }
 
     void Update()
