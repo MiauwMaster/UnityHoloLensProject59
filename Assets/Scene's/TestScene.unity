@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -220,7 +220,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4970951512880778, guid: ae2cd9438bef2c540b09d658dd7edabd, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -16.32
+      value: -9.74
       objectReference: {fileID: 0}
     - target: {fileID: 4970951512880778, guid: ae2cd9438bef2c540b09d658dd7edabd, type: 2}
       propertyPath: m_LocalPosition.y
@@ -228,7 +228,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4970951512880778, guid: ae2cd9438bef2c540b09d658dd7edabd, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -5.98
+      value: -0.87
       objectReference: {fileID: 0}
     - target: {fileID: 4970951512880778, guid: ae2cd9438bef2c540b09d658dd7edabd, type: 2}
       propertyPath: m_LocalRotation.x
@@ -280,6 +280,16 @@ Prefab:
         type: 2}
       propertyPath: upgradedLvl
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114999296172350130, guid: ae2cd9438bef2c540b09d658dd7edabd,
+        type: 2}
+      propertyPath: startDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114999296172350130, guid: ae2cd9438bef2c540b09d658dd7edabd,
+        type: 2}
+      propertyPath: fireRate
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2cd9438bef2c540b09d658dd7edabd, type: 2}
@@ -382,8 +392,8 @@ Camera:
   m_GameObject: {fileID: 1540889211}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -484,6 +494,11 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 1.643
       objectReference: {fileID: 0}
+    - target: {fileID: 114961687110795368, guid: 1e8d309ab05c0c645ab268b951d63e36,
+        type: 2}
+      propertyPath: slowingAmount
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1e8d309ab05c0c645ab268b951d63e36, type: 2}
   m_IsPrefabParent: 0
@@ -553,6 +568,10 @@ Prefab:
       value: 
       objectReference: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
         type: 2}
+    - target: {fileID: 4951865809828402, guid: e2d76c00baf412042a700d3e4d95956c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 29.51
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e2d76c00baf412042a700d3e4d95956c, type: 2}
   m_IsPrefabParent: 0
