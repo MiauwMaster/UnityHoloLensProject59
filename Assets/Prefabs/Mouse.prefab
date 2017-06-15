@@ -37,6 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4878870944496050}
   - component: {fileID: 114292517316353092}
+  - component: {fileID: 114267380114311758}
   m_Layer: 0
   m_Name: Mouse
   m_TagString: Untagged
@@ -110,6 +111,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1310892548288028}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114267380114311758
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1315696951131234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c72f6a2f9989cc24f9b97dccc0660fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turret: {fileID: 1969505311601122, guid: ae2cd9438bef2c540b09d658dd7edabd, type: 2}
 --- !u!114 &114292517316353092
 MonoBehaviour:
   m_ObjectHideFlags: 1

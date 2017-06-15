@@ -22,11 +22,11 @@ public class BuildTurrets : MonoBehaviour {
 
 	void Recognizer_TappedEvent(InteractionSourceKind source,int tapCount, Ray headRay)
 	{
-		var direction = headRay.direction;
-		var origin = headRay.origin;
-		var position = origin + direction * 2.0f;
+		//var direction = headRay.direction;
+		//var origin = headRay.origin;
+		//var position = origin + direction * 2.0f;
 
-		Instantiate(turret, position, Quaternion.identity);
+		Instantiate(turret, this.transform.position, Quaternion.identity);
 	}
 
 	//void OnMouseDown()
