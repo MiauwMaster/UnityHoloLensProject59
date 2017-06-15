@@ -85,6 +85,7 @@ GameObject:
   - component: {fileID: 4521441500506714}
   - component: {fileID: 114961687110795368}
   - component: {fileID: 120430976876642906}
+  - component: {fileID: 65341988571505684}
   m_Layer: 0
   m_Name: LaserBeamer
   m_TagString: Untagged
@@ -99,7 +100,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1714079101481998}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.487, z: 1.7850002}
+  m_LocalPosition: {x: -0, y: 0.487, z: 1.643}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4583423092376600}
@@ -242,6 +243,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1303667745040900}
   m_Mesh: {fileID: 4300000, guid: 41485a86c4805b540ae017a5100f045f, type: 3}
+--- !u!65 &65341988571505684
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1917972570874120}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.09, y: 1.85, z: 1.78}
+  m_Center: {x: -0.04, y: 1.41, z: 0}
 --- !u!114 &114961687110795368
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -255,7 +268,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 20
   fireRate: 1
+  startDamage: 0
+  endDamage: 0
+  upgradedLvl: 1
+  testUpgrade: 0
   useLaser: 1
+  slowingAmount: 0
   lineRenderer: {fileID: 120430976876642906}
   turnSpeed: 10
   partToRotate: {fileID: 4583423092376600}

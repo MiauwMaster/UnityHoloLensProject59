@@ -153,6 +153,11 @@ public class Turret : MonoBehaviour {
 		Gizmos.color = Color.red;
 		Gizmos.DrawWireSphere(transform.position, range);
 	}
+
+    void OnSelect()
+    {
+        testUpgrade = true;
+    }
 	#endregion
 }
 

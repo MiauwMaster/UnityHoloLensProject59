@@ -84,6 +84,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4970951512880778}
   - component: {fileID: 114999296172350130}
+  - component: {fileID: 65237529614033970}
   m_Layer: 0
   m_Name: Ref_Turret
   m_TagString: Untagged
@@ -152,7 +153,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1969505311601122}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.114071, y: 7.661726, z: 0}
+  m_LocalPosition: {x: -16.32, y: 0, z: -5.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4768777770828690}
@@ -241,6 +242,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1654109763477468}
   m_Mesh: {fileID: 4300002, guid: edc55ca0ea60e1540810445497934e9f, type: 3}
+--- !u!65 &65237529614033970
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1969505311601122}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.47, y: 1.72, z: 1.34}
+  m_Center: {x: 0.03, y: 0.82, z: 0}
 --- !u!114 &114999296172350130
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -254,15 +267,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 15
   fireRate: 1
-  startDamage: 0
+  startDamage: 1
   endDamage: 0
-  upgradedLvl: 1
+  upgradedLvl: 0
   testUpgrade: 0
   useLaser: 0
-  slowingAmount: 0
+  slowingAmount: 1
   lineRenderer: {fileID: 0}
   turnSpeed: 10
-  partToRotate: {fileID: 0}
+  partToRotate: {fileID: 4768777770828690}
   enemyTag: Enemy
-  bulletPrefab: {fileID: 0}
-  firePoint: {fileID: 0}
+  bulletPrefab: {fileID: 1114500875926168, guid: e2b189150e65c374588b4f825a2af3d0,
+    type: 2}
+  firePoint: {fileID: 4472069724671816}
