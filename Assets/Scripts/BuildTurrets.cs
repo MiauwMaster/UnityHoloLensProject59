@@ -23,7 +23,7 @@ public class BuildTurrets : MonoBehaviour {
 
 	void Recognizer_TappedEvent(InteractionSourceKind source,int tapCount, Ray headRay)
 	{
-		if ()
+		if (true)
 		{
 			Instantiate(turret, this.transform.position, Quaternion.identity);
 		}
