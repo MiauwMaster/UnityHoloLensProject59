@@ -5,6 +5,7 @@ public class BuildTurrets : MonoBehaviour {
 
 	#region Variables
 	public GameObject turret;
+	public string  terrain = "InvisTerrain";
 
 	GestureRecognizer recognizer;
 
@@ -17,30 +18,17 @@ public class BuildTurrets : MonoBehaviour {
 	{
 		recognizer = new GestureRecognizer();
 		recognizer.TappedEvent += Recognizer_TappedEvent;
-		recognizer.StartCapturingGestures();
+		recognizer.StartCapturingGestures(); 
 	}
 
 	void Recognizer_TappedEvent(InteractionSourceKind source,int tapCount, Ray headRay)
 	{
-		//var direction = headRay.direction;
-		//var origin = headRay.origin;
-		//var position = origin + direction * 2.0f;
+		if ()
+		{
+			Instantiate(turret, this.transform.position, Quaternion.identity);
+		}
 
-		Instantiate(turret, this.transform.position, Quaternion.identity);
 	}
-
-	//void OnMouseDown()
-	//{
-
-	//	Debug.Log("hit1");
-	//	Vector3 fwd = transform.TransformDirection(Vector3.forward);
-
-	//	if (Physics.Raycast(transform.position, fwd, distance))
-	//	{
-	//		Debug.Log("hit2");
-	//		Instantiate(turret, turret.transform.position, turret.transform.rotation);
-	//	}
-	//}
 	#endregion
 }
 
