@@ -7,6 +7,7 @@ public class Turret : MonoBehaviour {
 	
 	[Header("General")]
 	public float range = 15f;
+    public int price;
 
 	[Header("Bullets Default")]
 	public float fireRate = 1f;
