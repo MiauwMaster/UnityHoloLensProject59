@@ -12,6 +12,16 @@ public class Player : MonoBehaviour {
         money += amount;
     }
 
+    public void LoseMoney(int amount)
+    {
+        money -= amount;
+
+        if (money < 0)
+        {
+            money = 0;
+        }
+    }
+
     public void LoseLife(int life)
     {
         health -= life;
