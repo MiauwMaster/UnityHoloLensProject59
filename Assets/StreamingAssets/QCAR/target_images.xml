@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
-    <ImageTarget name="sonnet14" size="50.000000 44.186047" />
-    <ImageTarget name="en" size="50.000000 40.559441" />
-    <ImageTarget name="jp" size="50.000000 17.916666" />
+    <ImageTarget name="cfresh" size="0.200000 0.187128" />
     <ImageTarget name="Seasons" size="50.000000 50.000000" />
-    <ImageTarget name="BenjaminHoff" size="50.000000 51.041668" />
   </Tracking>
 </QCARConfig>
