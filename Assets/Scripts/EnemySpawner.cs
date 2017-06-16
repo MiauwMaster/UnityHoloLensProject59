@@ -3,8 +3,8 @@ using System.Collections;
 
 public class EnemySpawner : MonoBehaviour {
 
-	float spawnCD = 0.25f;
-	float spawnCDremaining = 5;
+	public float delayBetweenSpawns = 0.25f;
+	public float spawnDelay = 5;
 
 	[System.Serializable]
 	public class WaveComponent {
@@ -23,9 +23,9 @@ public class EnemySpawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		spawnCDremaining -= Time.deltaTime;
-		if(spawnCDremaining < 0) {
-			spawnCDremaining = spawnCD;
+		spawnDelay -= Time.deltaTime;
+		if(spawnDelay < 0) {
+			spawnDelay = delayBetweenSpawns;
 
 			bool didSpawn = false;
 
