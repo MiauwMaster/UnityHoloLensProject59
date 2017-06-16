@@ -5,7 +5,6 @@ public class BuildTurrets : MonoBehaviour {
 
 	#region Variables
 	public GameObject turret;
-	public string  terrain = "InvisTerrain";
 
 	GestureRecognizer recognizer;
 
@@ -23,10 +22,10 @@ public class BuildTurrets : MonoBehaviour {
 
 	void Recognizer_TappedEvent(InteractionSourceKind source,int tapCount, Ray headRay)
 	{
-        if (GetComponent<Player>().money >= turret.GetComponent<Turret>().price)
+        if (Camera.main.GetComponent<Player>().money >= turret.GetComponent<Turret>().price)
         {
             Instantiate(turret, this.transform.position, this.transform.rotation);
-            GetComponent<Player>().LoseMoney(turret.GetComponent<Turret>().price);
+            Camera.main.GetComponent<Player>().LoseMoney(turret.GetComponent<Turret>().price);
         }
 
 
