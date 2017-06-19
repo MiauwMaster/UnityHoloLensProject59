@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
     public int health;
     public int money;
     public bool isAlive = true;
+    public Text moneyText;
+    public Text livesText;
+
 	// Use this for initialization
 	
     public void AddMoney(int amount)
@@ -41,5 +45,11 @@ public class Player : MonoBehaviour {
     {
         isAlive = false;
         Debug.Log("DOOD");
+    }
+
+    void Update()
+    {
+        moneyText.text = "Money: " + money.ToString();
+        livesText.text = "Health: " + health.ToString();
     }
 }

@@ -24,7 +24,8 @@ public class MoveToPlayer : MonoBehaviour
             if (transform.position == target.position)
             {
                 Camera.main.GetComponent<Player>().LoseLife(GetComponent<Enemy>().damage);
-                GetComponent<Enemy>().Die();
+                //GetComponent<Enemy>().Die();
+                Destroy(gameObject);
                 target = null;
             }
 
