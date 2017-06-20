@@ -21,7 +21,7 @@ public class SpeechManager : MonoBehaviour
             GetComponent<BuildTurrets>().turret = laserTurret;
 		});
 
-        keywords.Add("Gun", () =>
+        keywords.Add("Cannon", () =>
         {
             // Call the OnReset method on every descendant object.
             GetComponent<BuildTurrets>().turret = gunTurret;
