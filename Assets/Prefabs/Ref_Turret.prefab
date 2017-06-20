@@ -270,7 +270,7 @@ MonoBehaviour:
   fireRate: 1
   startDamage: 1
   endDamage: 0
-  upgradedLvl: 0
+  upgradedLvl: 1
   testUpgrade: 0
   useLaser: 0
   slowingAmount: 1
