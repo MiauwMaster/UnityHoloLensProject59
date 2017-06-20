@@ -24,19 +24,16 @@ public class SpeechManager : MonoBehaviour
         keywords.Add("Cannon", () =>
         {          
             GetComponent<BuildTurrets>().turret = gunTurret;
-            GetComponent<UpgradeTurrets>().enabled = false;
         });
 
         keywords.Add("Missile", () =>
         {           
             GetComponent<BuildTurrets>().turret = missileTurret;
-            GetComponent<UpgradeTurrets>().enabled = false;
         });
 
-        keywords.Add("Upgrade", () =>
+        keywords.Add("Upgrade cannons", () =>
         {
-            GetComponent<BuildTurrets>().turret = null;
-            GetComponent<UpgradeTurrets>().enabled = true;            
+            GetComponent<UpgradeTurrets>().UpgradeTurret();
         });
 
         // Tell the KeywordRecognizer about our keywords.

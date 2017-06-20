@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 65237529614033970}
   m_Layer: 0
   m_Name: Ref_Turret
-  m_TagString: Untagged
+  m_TagString: NonUpgradedTurret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -268,10 +268,8 @@ MonoBehaviour:
   range: 15
   price: 5
   fireRate: 1
-  startDamage: 1
-  endDamage: 0
-  upgradedLvl: 1
-  testUpgrade: 0
+  damage: 1
+  upgraded: 0
   useLaser: 0
   slowingAmount: 1
   lineRenderer: {fileID: 0}

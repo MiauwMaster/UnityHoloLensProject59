@@ -1,18 +1,14 @@
 ﻿using UnityEngine;
-using UnityEngine.VR.WSA.Input;
+using System.Collections.Generic;
+
 
 public class UpgradeTurrets : MonoBehaviour {
 
-
-
     #region Variables
+
+    List<GameObject> nonUpgradedTurrets;
+    public int upgradePrice = 5;
     
-    GestureRecognizer recognizer;
-    RaycastHit hit;
-    Camera mainCam { get { return Camera.main.GetComponent<Camera>(); } }
-    Ray ray { get { return mainCam.ScreenPointToRay(this.transform.position); } }
-    bool didHitSomething { get { return Physics.Raycast(ray, out hit); } }
-    bool hitCollider { get { return hit.collider != null; } }
     #endregion
 
 
@@ -20,27 +16,34 @@ public class UpgradeTurrets : MonoBehaviour {
 
     private void Start()
     {
-        recognizer = new GestureRecognizer();
-        recognizer.TappedEvent += Recognizer_TappedEvent;
-        recognizer.StartCapturingGestures();
+        nonUpgradedTurrets = new List<GameObject>();
     }
 
-    void UpgradeTurret()
+    void Update()
     {
-      
-        if (didHitSomething && hitCollider)
+        // Add non upgraded turrets to list
+        nonUpgradedTurrets.AddRange(GameObject.FindGameObjectsWithTag("NonUpgradedTurret"));
+    }
+
+    public void UpgradeTurret()
+    {
+        // If we have enough moneys
+        if (Camera.main.GetComponent<Player>().money >= (nonUpgradedTurrets.Count * upgradePrice))
         {
-            hit.collider.GetComponent<Turret>().fireRate = 500;
+            foreach (var turret in nonUpgradedTurrets)
+            {
+                // Set each turret upgraded bool to true
+                turret.GetComponent<Turret>().upgraded = true;
+                // Change tag
+                turret.tag = "UpgradedTurret";
+                // remove the moneys
+                Camera.main.GetComponent<Player>().LoseMoney(upgradePrice);
+                // and remove from the list.
+                nonUpgradedTurrets.Remove(turret);
+            }
         }
     }
 
-    void Recognizer_TappedEvent(InteractionSourceKind source, int tapCount, Ray headRay)
-    {
-        if (Camera.main.GetComponent<Player>().money >= (hit.collider.GetComponent<Turret>().price / 2))
-        {
-            UpgradeTurret();
-            //Camera.main.GetComponent<Player>().LoseMoney((hit.collider.GetComponent<Turret>().price / 2));
-        }
-    }
+    
     #endregion
 }

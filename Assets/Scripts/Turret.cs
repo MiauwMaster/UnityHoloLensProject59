@@ -11,11 +11,9 @@ public class Turret : MonoBehaviour {
 
 	[Header("Bullets Default")]
 	public float fireRate = 1f;
+    public float damage = 1;
 	private float fireCountDown = 0f;
-	public float startDamage = 0f;
-    public float endDamage = 0f;
-	public int upgradedLvl = 1;
-	public bool testUpgrade = false;
+	public bool upgraded = false;
 
 	[Header("laser")]
 	public bool useLaser = false;
@@ -38,12 +36,11 @@ public class Turret : MonoBehaviour {
 	
 	void Start () {
 		InvokeRepeating("UpdateTarget", 0f, 0.5f);
-        endDamage = startDamage;
 	}
 	
 	void UpdateTarget()
 	{
-		UpgradeTurret();
+        IsUpgraded();
 
 		GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
 
@@ -129,7 +126,7 @@ public class Turret : MonoBehaviour {
 
 		if(bullet != null)
 		{
-            bullet.damage = (int)endDamage;
+            bullet.damage = (int)damage;
 			bullet.Seek(target);
 			if (useLaser)
 			{
@@ -138,26 +135,19 @@ public class Turret : MonoBehaviour {
 		}
 	}
 
-	public void UpgradeTurret()
-	{
-		if (testUpgrade)
-		{
-			upgradedLvl++;
-			fireRate = fireRate + 0.25f;
-			endDamage += 0.25f * upgradedLvl;
-			testUpgrade = false;
-		}
-	}
-	
 	private void OnDrawGizmosSelected()
 	{
 		Gizmos.color = Color.red;
 		Gizmos.DrawWireSphere(transform.position, range);
 	}
 
-    void OnSelect()
+    void IsUpgraded()
     {
-        testUpgrade = true;
+        if (upgraded)
+        {
+            damage /= 2;
+            fireRate *= 4;
+        }
     }
 	#endregion
 }

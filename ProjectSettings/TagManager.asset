@@ -10,6 +10,8 @@ TagManager:
   - target
   - InvisTerrain
   - Particle
+  - NonUpgradedTurret
+  - UpgradedTurret
   layers:
   - Default
   - TransparentFX
