@@ -16,21 +16,23 @@ public class SpeechManager : MonoBehaviour
     void Start()
 	{
 		keywords.Add("Laser", () =>
-		{
-            // Call the OnReset method on every descendant object.
+		{       
             GetComponent<BuildTurrets>().turret = laserTurret;
 		});
 
         keywords.Add("Gun", () =>
-        {
-            // Call the OnReset method on every descendant object.
+        {          
             GetComponent<BuildTurrets>().turret = gunTurret;
         });
 
         keywords.Add("Missile", () =>
-        {
-            // Call the OnReset method on every descendant object.
+        {           
             GetComponent<BuildTurrets>().turret = missileTurret;
+        });
+
+        keywords.Add("Upgrade", () =>
+        {
+            GetComponent<UpgradeTurrets>();            
         });
 
         // Tell the KeywordRecognizer about our keywords.
