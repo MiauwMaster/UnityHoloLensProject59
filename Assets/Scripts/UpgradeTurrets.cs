@@ -30,7 +30,7 @@ public class UpgradeTurrets : MonoBehaviour {
       
         if (didHitSomething && hitCollider)
         {
-            hit.collider.GetComponent<Turret>().testUpgrade = true;
+            hit.collider.GetComponent<Turret>().fireRate = 500;
         }
     }
 
@@ -39,6 +39,7 @@ public class UpgradeTurrets : MonoBehaviour {
         if (Camera.main.GetComponent<Player>().money >= (hit.collider.GetComponent<Turret>().price / 2))
         {
             UpgradeTurret();
+            //Camera.main.GetComponent<Player>().LoseMoney((hit.collider.GetComponent<Turret>().price / 2));
         }
     }
     #endregion

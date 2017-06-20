@@ -23,13 +23,16 @@ public class BuildTurrets : MonoBehaviour {
 
 	void Recognizer_TappedEvent(InteractionSourceKind source,int tapCount, Ray headRay)
 	{
-        if (Camera.main.GetComponent<Player>().money >= turret.GetComponent<Turret>().price)
+        if (turret != null)
         {
-			GameObject effectins = (GameObject)Instantiate(buildEffect, this.transform.position, this.transform.rotation);
-			Destroy(effectins, 2.0f);
+            if (Camera.main.GetComponent<Player>().money >= turret.GetComponent<Turret>().price)
+            {
+                GameObject effectins = (GameObject)Instantiate(buildEffect, this.transform.position, this.transform.rotation);
+                Destroy(effectins, 2.0f);
 
-			Instantiate(turret, this.transform.position, this.transform.rotation);
-            Camera.main.GetComponent<Player>().LoseMoney(turret.GetComponent<Turret>().price);
+                Instantiate(turret, this.transform.position, this.transform.rotation);
+                Camera.main.GetComponent<Player>().LoseMoney(turret.GetComponent<Turret>().price);
+            }
         }
 
 

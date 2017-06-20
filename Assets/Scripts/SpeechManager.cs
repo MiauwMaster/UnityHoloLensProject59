@@ -35,6 +35,7 @@ public class SpeechManager : MonoBehaviour
 
         keywords.Add("Upgrade", () =>
         {
+            GetComponent<BuildTurrets>().turret = null;
             GetComponent<UpgradeTurrets>().enabled = true;            
         });
 
