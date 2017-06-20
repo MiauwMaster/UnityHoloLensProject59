@@ -5,6 +5,7 @@ public class BuildTurrets : MonoBehaviour {
 
 	#region Variables
 	public GameObject turret;
+	public GameObject buildEffect;
 
 	GestureRecognizer recognizer;
 
@@ -24,7 +25,10 @@ public class BuildTurrets : MonoBehaviour {
 	{
         if (Camera.main.GetComponent<Player>().money >= turret.GetComponent<Turret>().price)
         {
-            Instantiate(turret, this.transform.position, this.transform.rotation);
+			GameObject effectins = (GameObject)Instantiate(buildEffect, this.transform.position, this.transform.rotation);
+			Destroy(effectins, 2.0f);
+
+			Instantiate(turret, this.transform.position, this.transform.rotation);
             Camera.main.GetComponent<Player>().LoseMoney(turret.GetComponent<Turret>().price);
         }
 
