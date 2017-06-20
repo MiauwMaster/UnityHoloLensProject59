@@ -20,7 +20,7 @@ public class SpeechManager : MonoBehaviour
             GetComponent<BuildTurrets>().turret = laserTurret;
 		});
 
-        keywords.Add("Gun", () =>
+        keywords.Add("Cannon", () =>
         {          
             GetComponent<BuildTurrets>().turret = gunTurret;
         });
