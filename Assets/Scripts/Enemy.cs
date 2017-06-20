@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour {
     public bool isDead = false;
     public int moneyAmount;
     public int damage;
+	public GameObject deathParticle;
 
     // Use this for initialization
   
@@ -29,7 +30,10 @@ public class Enemy : MonoBehaviour {
 
         if (health <= 0)
         {
-            Die();
+			GameObject effectins = (GameObject)Instantiate(deathParticle, this.transform.position, this.transform.rotation);
+			Destroy(effectins, 2.0f);
+
+			Die();
         }
     }
 
