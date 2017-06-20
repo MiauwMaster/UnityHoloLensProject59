@@ -8,7 +8,6 @@ public class UpgradeTurrets : MonoBehaviour {
     #region Variables
     
     GestureRecognizer recognizer;
-    public GameObject turret;
     RaycastHit hit;
     Camera mainCam { get { return Camera.main.GetComponent<Camera>(); } }
     Ray ray { get { return mainCam.ScreenPointToRay(this.transform.position); } }
@@ -37,7 +36,7 @@ public class UpgradeTurrets : MonoBehaviour {
 
     void Recognizer_TappedEvent(InteractionSourceKind source, int tapCount, Ray headRay)
     {
-        if (Camera.main.GetComponent<Player>().money >= (turret.GetComponent<Turret>().price / 2))
+        if (Camera.main.GetComponent<Player>().money >= (hit.collider.GetComponent<Turret>().price / 2))
         {
             UpgradeTurret();
         }
