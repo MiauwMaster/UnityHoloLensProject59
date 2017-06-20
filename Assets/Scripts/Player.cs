@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
@@ -9,6 +10,8 @@ public class Player : MonoBehaviour {
     public bool isAlive = true;
     public Text moneyText;
     public Text livesText;
+    public Texture gameoverTexture;
+
 
 	// Use this for initialization
 	
@@ -44,6 +47,7 @@ public class Player : MonoBehaviour {
     void Die()
     {
         isAlive = false;
+        SceneManager.LoadScene("GameOver", LoadSceneMode.Additive);
         Debug.Log("DOOD");
     }
 
