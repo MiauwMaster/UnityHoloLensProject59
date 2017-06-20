@@ -47,8 +47,8 @@ public class Player : MonoBehaviour {
     void Die()
     {
         isAlive = false;
-        SceneManager.LoadScene("GameOver", LoadSceneMode.Additive);
         Debug.Log("DOOD");
+        
     }
 
     void Update()

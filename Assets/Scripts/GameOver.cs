@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameOver : MonoBehaviour {
 
@@ -8,6 +9,10 @@ public class GameOver : MonoBehaviour {
 
     void OnGUI()
     {
-          GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), gameOverTexture);
+        if (Camera.main.GetComponent<Player>().isAlive == false)
+        {
+            GetComponent<Text>().enabled = true; 
+        }
+        
     }
 }
