@@ -177,12 +177,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 496d94e21929a854d811811f0034a1f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayBetweenSpawns: 3
-  spawnDelay: 9
+  delayBetweenSpawns: 7.6
+  spawnDelay: 10
   waveComps:
   - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
       type: 2}
-    num: 20
+    num: 17
+  - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
+      type: 2}
+    num: 3
 --- !u!1 &277449771
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,12 +364,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 496d94e21929a854d811811f0034a1f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayBetweenSpawns: 2
-  spawnDelay: 9
+  delayBetweenSpawns: 8.2
+  spawnDelay: 10
   waveComps:
   - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
       type: 2}
-    num: 20
+    num: 14
+  - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
+      type: 2}
+    num: 1
+  - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
+      type: 2}
+    num: 4
+  - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
+      type: 2}
+    num: 1
 --- !u!1 &568107151
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,12 +521,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 496d94e21929a854d811811f0034a1f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayBetweenSpawns: 3
+  delayBetweenSpawns: 9.4
   spawnDelay: 10
   waveComps:
   - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
       type: 2}
-    num: 20
+    num: 10
+  - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
+      type: 2}
+    num: 1
+  - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
+      type: 2}
+    num: 4
+  - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
+      type: 2}
+    num: 3
+  - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
+      type: 2}
+    num: 2
 --- !u!1 &860687452
 GameObject:
   m_ObjectHideFlags: 0
@@ -662,12 +686,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 496d94e21929a854d811811f0034a1f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayBetweenSpawns: 3
+  delayBetweenSpawns: 7.1
   spawnDelay: 10
   waveComps:
   - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
       type: 2}
-    num: 20
+    num: 18
+  - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
+      type: 2}
+    num: 2
 --- !u!1 &1202767622
 GameObject:
   m_ObjectHideFlags: 0
@@ -1078,12 +1105,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 496d94e21929a854d811811f0034a1f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayBetweenSpawns: 3
-  spawnDelay: 9
+  delayBetweenSpawns: 9.7
+  spawnDelay: 10
   waveComps:
   - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
       type: 2}
-    num: 20
+    num: 15
+  - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
+      type: 2}
+    num: 1
+  - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
+      type: 2}
+    num: 2
+  - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
+      type: 2}
+    num: 2
 --- !u!1 &1832808684
 GameObject:
   m_ObjectHideFlags: 0
