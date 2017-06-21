@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class GameOver : MonoBehaviour {
 
-    public Texture gameOverTexture;
-
     void OnGUI()
     {
         if (Camera.main.GetComponent<Player>().isAlive == false)
