@@ -10,8 +10,6 @@ public class Player : MonoBehaviour {
     public bool isAlive = true;
     public Text moneyText;
     public Text livesText;
-    public Texture gameoverTexture;
-
 
 	// Use this for initialization
 	
@@ -22,6 +20,11 @@ public class Player : MonoBehaviour {
 
     public void LoseMoney(int amount)
     {
+        if (amount > money)
+        {
+            return;
+        }
+
         money -= amount;
 
         if (money < 0)
@@ -44,11 +47,11 @@ public class Player : MonoBehaviour {
             health = 0;
         }
     }
+
     void Die()
     {
         isAlive = false;
         Debug.Log("DOOD");
-        
     }
 
     void Update()
