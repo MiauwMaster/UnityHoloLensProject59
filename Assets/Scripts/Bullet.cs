@@ -4,9 +4,8 @@ public class Bullet : MonoBehaviour {
 
 	#region Variables
 	private Transform target;
-    public int damage;
+    public float damage;
 	public float speed = 70f;
-	public GameObject hitEffect;
 	#endregion
 
 
@@ -39,10 +38,6 @@ public class Bullet : MonoBehaviour {
 
 	void HitTarget()
 	{
-        //Particle system for a hit
-        GameObject effectIns = (GameObject)Instantiate(hitEffect, transform.position, transform.rotation);
-        Destroy(effectIns, 2f);
-
         target.GetComponent<Enemy>().LoseLife(damage);
 
 		Destroy(gameObject);

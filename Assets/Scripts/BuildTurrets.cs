@@ -32,11 +32,6 @@ public class BuildTurrets : MonoBehaviour {
 
                 Instantiate(turret, this.transform.position, this.transform.rotation);
                 Camera.main.GetComponent<Player>().LoseMoney(turret.GetComponent<Turret>().price);
-                
-                if(turret.tag == "NonUpgradedTurret")
-                {
-                    GetComponent<UpgradeTurrets>().Add(turret);
-                }
             }
         }
 	}

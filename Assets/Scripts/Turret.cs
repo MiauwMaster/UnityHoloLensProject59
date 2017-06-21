@@ -12,7 +12,13 @@ public class Turret : MonoBehaviour {
 	[Header("Bullets Default")]
 	public float fireRate = 1f;
     public float damage = 1;
-	private float fireCountDown = 0f;
+
+    [Header("Ugrades")]
+    public float fireRateMultiplier;
+    float upgradedFireRate;
+    public float upgradedDamage;
+
+    private float fireCountDown = 0f;
 	public bool upgraded = false;
 
 	[Header("laser")]
@@ -36,6 +42,7 @@ public class Turret : MonoBehaviour {
 	
 	void Start () {
 		InvokeRepeating("UpdateTarget", 0f, 0.5f);
+        upgradedFireRate = fireRate * fireRateMultiplier;
 	}
 	
 	void UpdateTarget()
@@ -126,7 +133,9 @@ public class Turret : MonoBehaviour {
 
 		if(bullet != null)
 		{
-            bullet.damage = (int)damage;
+
+            bullet.damage = damage;
+
 			bullet.Seek(target);
 			if (useLaser)
 			{
@@ -145,8 +154,8 @@ public class Turret : MonoBehaviour {
     {
         if (upgraded)
         {
-            damage /= 2;
-            fireRate *= 4;
+            fireRate = upgradedFireRate;
+            damage = upgradedDamage;
         }
     }
 	#endregion
