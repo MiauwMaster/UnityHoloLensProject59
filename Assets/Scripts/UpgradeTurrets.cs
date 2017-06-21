@@ -19,7 +19,7 @@ public class UpgradeTurrets : MonoBehaviour {
         nonUpgradedTurrets = new List<GameObject>();
     }
 
-    public void AddTurretToList(GameObject turret)
+    public void Add(GameObject turret)
     {
         nonUpgradedTurrets.Add(turret);
     }
