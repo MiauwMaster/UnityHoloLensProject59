@@ -6,7 +6,7 @@ public class UpgradeTurrets : MonoBehaviour {
 
     #region Variables
 
-    List<GameObject> nonUpgradedTurrets;
+    public List<GameObject> nonUpgradedTurrets;
     public int upgradePrice = 5;
     
     #endregion
@@ -19,10 +19,9 @@ public class UpgradeTurrets : MonoBehaviour {
         nonUpgradedTurrets = new List<GameObject>();
     }
 
-    void Update()
+    public void AddTurretToList(GameObject turret)
     {
-        // Add non upgraded turrets to list
-        nonUpgradedTurrets.AddRange(GameObject.FindGameObjectsWithTag("NonUpgradedTurret"));
+        nonUpgradedTurrets.Add(turret);
     }
 
     public void UpgradeTurret()
