@@ -23,6 +23,7 @@ public class EnemySpawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        DeathCheck();
 		spawnDelay -= Time.deltaTime;
 		if(spawnDelay < 0) {
 			spawnDelay = delayBetweenSpawns;
@@ -60,4 +61,12 @@ public class EnemySpawner : MonoBehaviour {
 			}
 		}
 	}
+
+    public void DeathCheck()
+    {
+        if (!Camera.main.GetComponent<Player>().isAlive)
+        {
+            Destroy(gameObject);
+        }
+    }
 }

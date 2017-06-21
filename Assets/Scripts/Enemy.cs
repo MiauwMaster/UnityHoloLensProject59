@@ -10,7 +10,15 @@ public class Enemy : MonoBehaviour {
 	public GameObject deathParticle;
 
     // Use this for initialization
-  
+
+    public void Update()
+    {
+        if(!Camera.main.GetComponent<Player>().isAlive)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     public void Die ()
     {
         isDead = true;
@@ -27,12 +35,10 @@ public class Enemy : MonoBehaviour {
             return;
         }
         
-
         if (health <= 0)
         {
 			GameObject effectins = (GameObject)Instantiate(deathParticle, this.transform.position, this.transform.rotation);
 			Destroy(effectins, 2.0f);
-
 			Die();
         }
     }
