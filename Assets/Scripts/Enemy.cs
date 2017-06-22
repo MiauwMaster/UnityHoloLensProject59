@@ -23,6 +23,7 @@ public class Enemy : MonoBehaviour {
     {
         isDead = true;
         Camera.main.GetComponent<Player>().AddMoney(moneyAmount);
+		FindObjectOfType<SoundManager>().Play("EnemyDeath");
         Destroy(gameObject);
     }
 

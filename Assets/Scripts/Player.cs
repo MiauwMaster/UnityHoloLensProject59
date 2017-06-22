@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -37,8 +37,9 @@ public class Player : MonoBehaviour
     public void LoseLife(int life)
     {
         health -= life;
+		FindObjectOfType<SoundManager>().Play("HitSound");
 
-        if (health <= 0 && isAlive)
+		if (health <= 0 && isAlive)
         {
             Die();
         }
@@ -52,7 +53,7 @@ public class Player : MonoBehaviour
     void Die()
     {
         isAlive = false;
-        Debug.Log("DOOD");
+		Debug.Log("DOOD");
     }
 
     void Update()
