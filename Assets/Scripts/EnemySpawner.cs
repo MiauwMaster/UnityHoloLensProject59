@@ -16,10 +16,6 @@ public class EnemySpawner : MonoBehaviour {
 
 	public WaveComponent[] waveComps;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -44,7 +40,6 @@ public class EnemySpawner : MonoBehaviour {
 
 			if(didSpawn == false) {
 				// Wave must be complete!
-				// TODO: Instantiate next wave object!
 
 				if(transform.parent.childCount > 1) {
 					transform.parent.GetChild(1).gameObject.SetActive(true);
@@ -62,11 +57,14 @@ public class EnemySpawner : MonoBehaviour {
 		}
 	}
 
+    /// <summary>
+    /// If the player is dead, dont spawn anymore by disabling this script
+    /// </summary>
     public void DeathCheck()
     {
         if (!Camera.main.GetComponent<Player>().isAlive)
         {
-            Destroy(gameObject);
+            this.gameObject.SetActive(false);
         }
     }
 }

@@ -19,14 +19,20 @@ public class UpgradeTurrets : MonoBehaviour {
         nonUpgradedTurrets = new List<GameObject>();
     }
 
+    /// <summary>
+    /// Add a turret to the nonUpgradedTurrets list
+    /// </summary>
+    /// <param name="turret">turret to add</param>
     public void Add(GameObject turret)
     {
         nonUpgradedTurrets.Add(turret);
     }
 
+    /// <summary>
+    /// Upgrade the turret, change the tag to "UpgradedTurret" and remove it from the list of unupgraded turrets
+    /// </summary>
     public void UpgradeTurret()
     {
-        //nonUpgradedTurrets.AddRange(GameObject.FindGameObjectsWithTag("NonUpgradedTurret"));
 
         // If we have enough moneys
         if (Camera.main.GetComponent<Player>().money >= (nonUpgradedTurrets.Count * upgradePrice))
@@ -44,11 +50,6 @@ public class UpgradeTurrets : MonoBehaviour {
             }
         }
 
-        // if not, clear the list
-        //else
-        //{
-        //    nonUpgradedTurrets.Clear();
-        //}
     }    
     #endregion
 }

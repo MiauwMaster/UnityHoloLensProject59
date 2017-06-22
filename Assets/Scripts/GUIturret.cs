@@ -7,9 +7,6 @@ public class GUIturret : MonoBehaviour {
     [SerializeField]
     private bool visible;
 
-
-
-
     // Use this for initialization
     void Start () {
         if (!visible)
@@ -17,15 +14,19 @@ public class GUIturret : MonoBehaviour {
             MakeInvisible();
         }
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	}
+
+    /// <summary>
+    /// Make the Canvas visible
+    /// </summary>
     public void MakeVisible()
     {
         GetComponent<CanvasGroup>().alpha = 1 ;
         return;
     }
+
+    /// <summary>
+    /// Make the canvas invisible
+    /// </summary>
     public void MakeInvisible()
     {
         GetComponent<CanvasGroup>().alpha = 0;

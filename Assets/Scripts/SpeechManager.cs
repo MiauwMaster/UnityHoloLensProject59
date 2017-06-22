@@ -18,6 +18,7 @@ public class SpeechManager : MonoBehaviour
     // Use this for initialization
     void Start()
 	{
+        //Keyword to select the laser turret
         keywords.Add("Laser", () =>
         {
             GetComponent<BuildTurrets>().turret = laserTurret;
@@ -27,6 +28,7 @@ public class SpeechManager : MonoBehaviour
             guiMissile.MakeInvisible();
         });
 
+        //Keyword to select the cannon turret
         keywords.Add("Cannon", () =>
         {
             GetComponent<BuildTurrets>().turret = gunTurret;
@@ -35,6 +37,7 @@ public class SpeechManager : MonoBehaviour
             guiMissile.MakeInvisible();
         });
 
+        //Keyword to select the missile turret
         keywords.Add("Missile", () =>
         {
             GetComponent<BuildTurrets>().turret = missileTurret;
@@ -43,6 +46,7 @@ public class SpeechManager : MonoBehaviour
             guiMissile.MakeVisible();
         });
 
+        //Keyword to upgrade the cannon turrets
         keywords.Add("Upgrade cannons", () =>
         {
             GetComponent<UpgradeTurrets>().UpgradeTurret();

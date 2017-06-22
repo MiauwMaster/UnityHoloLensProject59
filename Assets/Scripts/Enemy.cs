@@ -9,7 +9,6 @@ public class Enemy : MonoBehaviour {
     public int damage;
 	public GameObject deathParticle;
 
-    // Use this for initialization
 
     public void Update()
     {
@@ -19,6 +18,9 @@ public class Enemy : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// flag enemy as dead, add money to the player, play the death sound and destroy the gameobject
+    /// </summary>
     public void Die ()
     {
         isDead = true;
@@ -27,6 +29,10 @@ public class Enemy : MonoBehaviour {
         Destroy(gameObject);
     }
 
+    /// <summary>
+    /// Deal damage to the enemy
+    /// </summary>
+    /// <param name="life">the amount of damage this enemy takes</param>
     public void LoseLife(float life)
     {
         health -= life;
