@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 1
+  speed: 1.5
 --- !u!114 &114971680448108860
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d100c75b1d334ed4391e76140ddd8d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 15
   isDead: 0
   moneyAmount: 3
   damage: 2

@@ -9,17 +9,9 @@ public class SpeechManager : MonoBehaviour
 	KeywordRecognizer keywordRecognizer = null;
 	Dictionary<string, System.Action> keywords = new Dictionary<string, System.Action>();
 
-    public GameObject laserTurret;
-    public GameObject gunTurret;
-    public GameObject missileTurret;
+    public GameObject laserTurret, gunTurret, missileTurret;
     [SerializeField]
-    private GUIturret guiCanon;
-    [SerializeField]
-    private GUIturret guiLaser;
-    [SerializeField]
-    private GUIturret guiMissle;
-    [SerializeField]
-    private infoscript info;
+    private GUIturret guiCannon, guiMissile, guiLaser;
 
  //   public GUIturret guilaser;
 
@@ -31,45 +23,34 @@ public class SpeechManager : MonoBehaviour
             GetComponent<BuildTurrets>().turret = laserTurret;
             GetComponent<UpgradeTurrets>().enabled = false;
             guiLaser.MakeVisible();
-            guiCanon.MakeInvisible();
-            guiMissle.MakeInvisible();
+            guiCannon.MakeInvisible();
+            guiMissile.MakeInvisible();
         });
 
         keywords.Add("Cannon", () =>
         {
             GetComponent<BuildTurrets>().turret = gunTurret;
             guiLaser.MakeInvisible();
-            guiCanon.MakeVisible();
-            guiMissle.MakeInvisible();
+            guiCannon.MakeVisible();
+            guiMissile.MakeInvisible();
         });
 
         keywords.Add("Missile", () =>
         {
             GetComponent<BuildTurrets>().turret = missileTurret;
             guiLaser.MakeInvisible();
-            guiCanon.MakeInvisible();
-            guiMissle.MakeVisible();
+            guiCannon.MakeInvisible();
+            guiMissile.MakeVisible();
         });
 
         keywords.Add("Upgrade cannons", () =>
         {
             GetComponent<UpgradeTurrets>().UpgradeTurret();
             guiLaser.MakeInvisible();
-            guiCanon.MakeInvisible();
-            guiMissle.MakeInvisible();
+            guiCannon.MakeInvisible();
+            guiMissile.MakeInvisible();
         });
-
-        keywords.Add("Info", () =>
-        {
-            if (info.Nowvisible)
-            {
-                info.MakeInvisible();
-            }
-            else
-            {
-                info.MakeVisible();
-            }
-        });
+        
 
         // Tell the KeywordRecognizer about our keywords.
         keywordRecognizer = new KeywordRecognizer(keywords.Keys.ToArray());
