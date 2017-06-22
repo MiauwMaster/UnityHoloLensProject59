@@ -11,7 +11,7 @@ public class SpeechManager : MonoBehaviour
 
     public GameObject laserTurret, gunTurret, missileTurret;
     [SerializeField]
-    private GUIturret guiCanon, guiMissle, guiLaser;
+    private GUIturret guiCannon, guiMissile, guiLaser;
 
  //   public GUIturret guilaser;
 
@@ -23,32 +23,32 @@ public class SpeechManager : MonoBehaviour
             GetComponent<BuildTurrets>().turret = laserTurret;
             GetComponent<UpgradeTurrets>().enabled = false;
             guiLaser.MakeVisible();
-            guiCanon.MakeInvisible();
-            guiMissle.MakeInvisible();
+            guiCannon.MakeInvisible();
+            guiMissile.MakeInvisible();
         });
 
         keywords.Add("Cannon", () =>
         {
             GetComponent<BuildTurrets>().turret = gunTurret;
             guiLaser.MakeInvisible();
-            guiCanon.MakeVisible();
-            guiMissle.MakeInvisible();
+            guiCannon.MakeVisible();
+            guiMissile.MakeInvisible();
         });
 
         keywords.Add("Missile", () =>
         {
             GetComponent<BuildTurrets>().turret = missileTurret;
             guiLaser.MakeInvisible();
-            guiCanon.MakeInvisible();
-            guiMissle.MakeVisible();
+            guiCannon.MakeInvisible();
+            guiMissile.MakeVisible();
         });
 
         keywords.Add("Upgrade cannons", () =>
         {
             GetComponent<UpgradeTurrets>().UpgradeTurret();
             guiLaser.MakeInvisible();
-            guiCanon.MakeInvisible();
-            guiMissle.MakeInvisible();
+            guiCannon.MakeInvisible();
+            guiMissile.MakeInvisible();
         });
         
 
