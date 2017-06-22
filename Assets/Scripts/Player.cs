@@ -4,15 +4,16 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Player : MonoBehaviour {
+public class Player : MonoBehaviour
+{
     public int health;
     public int money;
     public bool isAlive = true;
     public Text moneyText;
     public Text livesText;
 
-	// Use this for initialization
-	
+    // Use this for initialization
+
     public void AddMoney(int amount)
     {
         money += amount;
@@ -42,7 +43,7 @@ public class Player : MonoBehaviour {
             Die();
         }
 
-        if(health < 0)
+        if (health < 0)
         {
             health = 0;
         }
@@ -56,7 +57,7 @@ public class Player : MonoBehaviour {
 
     void Update()
     {
-        moneyText.text = "Money: " + money.ToString();
-        livesText.text = "Health: " + health.ToString();
+        moneyText.text = money.ToString();
+        livesText.text = health.ToString() + " / 5";
     }
 }
