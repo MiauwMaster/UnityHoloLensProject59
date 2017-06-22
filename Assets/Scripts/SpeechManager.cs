@@ -9,17 +9,9 @@ public class SpeechManager : MonoBehaviour
 	KeywordRecognizer keywordRecognizer = null;
 	Dictionary<string, System.Action> keywords = new Dictionary<string, System.Action>();
 
-    public GameObject laserTurret;
-    public GameObject gunTurret;
-    public GameObject missileTurret;
+    public GameObject laserTurret, gunTurret, missileTurret;
     [SerializeField]
-    private GUIturret guiCanon;
-    [SerializeField]
-    private GUIturret guiLaser;
-    [SerializeField]
-    private GUIturret guiMissle;
-    [SerializeField]
-    private infoscript info;
+    private GUIturret guiCanon, guiMissle, guiLaser;
 
  //   public GUIturret guilaser;
 
@@ -58,18 +50,7 @@ public class SpeechManager : MonoBehaviour
             guiCanon.MakeInvisible();
             guiMissle.MakeInvisible();
         });
-
-        keywords.Add("Info", () =>
-        {
-            if (info.Nowvisible)
-            {
-                info.MakeInvisible();
-            }
-            else
-            {
-                info.MakeVisible();
-            }
-        });
+        
 
         // Tell the KeywordRecognizer about our keywords.
         keywordRecognizer = new KeywordRecognizer(keywords.Keys.ToArray());
