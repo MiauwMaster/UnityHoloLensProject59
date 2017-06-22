@@ -13,6 +13,8 @@ public class Sound {
 	public float volume;
 	[Range(.1f, 3f)]
 	public float pitch;
+	[Range(.1f, 1f)]
+	public float spatial;
 
 	public bool looping;
 

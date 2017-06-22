@@ -135,6 +135,7 @@ public class Turret : MonoBehaviour {
 		{
 
             bullet.damage = damage;
+			FindObjectOfType<SoundManager>().Play("GunSound");
 
 			bullet.Seek(target);
 			if (useLaser)
