@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    public int health;
-    public int money;
+    public int health = 5;
+    public int money = 15;
     public bool isAlive = true;
     public Text moneyText;
     public Text livesText;
