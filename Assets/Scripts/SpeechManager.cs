@@ -52,12 +52,9 @@ public class SpeechManager : MonoBehaviour
         keywords.Add("Upgrade", () =>
         {
             GetComponent<UpgradeTurrets>().UpgradeTurret();
-            guiLaser.MakeInvisible();
-            guiCannon.MakeInvisible();
-            guiMissile.MakeInvisible();
         });
 
-        keywords.Add("Pause", () =>
+        keywords.Add("Give me a break", () =>
         {
             pause.Pause();
         });

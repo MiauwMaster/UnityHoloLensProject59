@@ -162,12 +162,14 @@ public class Turret : MonoBehaviour {
 			FindObjectOfType<SoundManager>().Play("GunSound");
 
 			bullet.Seek(target);
-			if (useLaser)
+			
+		}
+
+        if (useLaser)
 			{
 				target.GetComponent<MoveToPlayer>().speed /= slowingAmount;
 				FindObjectOfType<SoundManager>().Play("LaserSound");
 			}
-		}
 	}
 
 	private void OnDrawGizmosSelected()
