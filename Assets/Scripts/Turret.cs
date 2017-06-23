@@ -27,8 +27,6 @@ public class Turret : MonoBehaviour {
 	public float slowingAmount;
 	public LineRenderer lineRenderer;
 
-	[Header("Missile")]
-	public bool isMissile = false;
 
 	[Header("Unity Setup!")]
 	public float turnSpeed = 10f;
@@ -161,21 +159,13 @@ public class Turret : MonoBehaviour {
 		{
 
             bullet.damage = damage;
-			
+			FindObjectOfType<SoundManager>().Play("GunSound");
 
 			bullet.Seek(target);
 			if (useLaser)
 			{
 				target.GetComponent<MoveToPlayer>().speed /= slowingAmount;
-				FindObjectOfType<SoundManager>().Play("");
-			}
-			if (useCannon)
-			{
-				FindObjectOfType<SoundManager>().Play("GunSound");
-			}
-			if (isMissile)
-			{
-				FindObjectOfType<SoundManager>().Play("");
+				FindObjectOfType<SoundManager>().Play("LaserSound");
 			}
 		}
 	}

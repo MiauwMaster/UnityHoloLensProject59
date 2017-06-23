@@ -54,19 +54,36 @@ MonoBehaviour:
   Sounds:
   - name: DeathSound
     clip: {fileID: 8300000, guid: 0fbfe56a2090ea8478e6c004c8d8b67a, type: 3}
-    volume: 0.7
+    volume: 0.5
     pitch: 1
+    spatial: 1
     looping: 0
     source: {fileID: 0}
   - name: HitSound
     clip: {fileID: 8300000, guid: 0b8f489397342964c8dce97ca483e27e, type: 3}
-    volume: 0.8
+    volume: 0.4
     pitch: 1
+    spatial: 1
     looping: 0
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+  - name: GunSound
+    clip: {fileID: 8300000, guid: f600dc6982ed0da4ea229a788ca49d6f, type: 3}
+    volume: 0.2
+    pitch: 1
+    spatial: 1
+    looping: 0
+    source: {fileID: 0}
+  - name: LaserSound
+    clip: {fileID: 8300000, guid: 7b0e358eabf786144bc39188dc088b72, type: 3}
+    volume: 0.2
+    pitch: 1
+    spatial: 1
+    looping: 1
+    source: {fileID: 0}
+  - name: MissileExplode
+    clip: {fileID: 8300000, guid: a71361a4859e618498037e84b422d4fe, type: 3}
+    volume: 1
+    pitch: 1
+    spatial: 1
     looping: 0
     source: {fileID: 0}
