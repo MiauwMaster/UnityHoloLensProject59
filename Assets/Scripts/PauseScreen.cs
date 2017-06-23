@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 public class PauseScreen : MonoBehaviour {
     [SerializeField]
     private Transform pausecanvas;
+    Scene torestart;
 
     void Start()
     {
         pausecanvas.gameObject.SetActive(false);
+        torestart = SceneManager.GetActiveScene();
     }
     // Update is called once per frame
     void Update () {
@@ -37,7 +39,7 @@ public class PauseScreen : MonoBehaviour {
     {
         if (SceneManager.GetActiveScene().name == "GameOver" || pausecanvas.gameObject.activeInHierarchy)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene(torestart.name);
         }
     }
 }

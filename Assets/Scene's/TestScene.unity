@@ -1543,6 +1543,11 @@ Prefab:
       propertyPath: guiMissile
       value: 
       objectReference: {fileID: 604768610}
+    - target: {fileID: 114779495833626722, guid: 489342aa598ea92448fbb2b30fab7a57,
+        type: 2}
+      propertyPath: pause
+      value: 
+      objectReference: {fileID: 896510137}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 489342aa598ea92448fbb2b30fab7a57, type: 2}
   m_IsPrefabParent: 0

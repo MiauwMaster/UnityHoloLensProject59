@@ -29,6 +29,7 @@ public class Turret : MonoBehaviour {
 
 	[Header("Missile")]
 	public bool isMissile = false;
+    public float missileDamage = 10;
 
 
 	[Header("Unity Setup!")]
@@ -188,7 +189,7 @@ public class Turret : MonoBehaviour {
 		if (missile != null)
 		{
 
-			missile.damage = damage;
+			missile.damage = missileDamage;
 
 			missile.Seek(target);
 
