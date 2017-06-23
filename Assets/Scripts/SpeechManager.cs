@@ -66,7 +66,11 @@ public class SpeechManager : MonoBehaviour
         {
             pause.Restart();
         });
-        
+        keywords.Add("Motherload", () =>
+        {
+            Camera.main.GetComponent<Player>().AddMoney(10000);
+        });
+
 
         // Tell the KeywordRecognizer about our keywords.
         keywordRecognizer = new KeywordRecognizer(keywords.Keys.ToArray());
