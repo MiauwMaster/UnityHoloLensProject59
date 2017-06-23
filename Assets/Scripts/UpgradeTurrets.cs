@@ -21,12 +21,6 @@ public class UpgradeTurrets : MonoBehaviour {
         nonUpgradedTurrets = new List<GameObject>();
     }
 
-    private void Update()
-    {
-
-        turretText.text = nonUpgradedTurrets.Count.ToString();
-    }
-
     /// <summary>
     /// Add a turret to the nonUpgradedTurrets list
     /// </summary>
@@ -34,6 +28,7 @@ public class UpgradeTurrets : MonoBehaviour {
     public void Add(GameObject turret)
     {
         nonUpgradedTurrets.Add(turret);
+        turretText.text = nonUpgradedTurrets.Count.ToString();
     }
 
     /// <summary>
@@ -54,6 +49,8 @@ public class UpgradeTurrets : MonoBehaviour {
                 Camera.main.GetComponent<Player>().LoseMoney(upgradePrice);
             }
             nonUpgradedTurrets.Clear();
+            turretText.text = nonUpgradedTurrets.Count.ToString();
+
         }
 
     }    
