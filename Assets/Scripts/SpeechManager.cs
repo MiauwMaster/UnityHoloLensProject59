@@ -31,7 +31,7 @@ public class SpeechManager : MonoBehaviour
         });
 
         //Keyword to select the cannon turret
-        keywords.Add("Cannon", () =>
+        keywords.Add("Gun", () =>
         {
             GetComponent<BuildTurrets>().turret = gunTurret;
             guiLaser.MakeInvisible();
@@ -49,7 +49,7 @@ public class SpeechManager : MonoBehaviour
         });
 
         //Keyword to upgrade the cannon turrets
-        keywords.Add("Upgrade cannons", () =>
+        keywords.Add("Upgrade", () =>
         {
             GetComponent<UpgradeTurrets>().UpgradeTurret();
             guiLaser.MakeInvisible();
