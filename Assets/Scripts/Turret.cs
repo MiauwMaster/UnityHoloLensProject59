@@ -27,6 +27,9 @@ public class Turret : MonoBehaviour {
 	public float slowingAmount;
 	public LineRenderer lineRenderer;
 
+	[Header("Missile")]
+	public bool isMissile = false;
+
 
 	[Header("Unity Setup!")]
 	public float turnSpeed = 10f;
@@ -34,6 +37,7 @@ public class Turret : MonoBehaviour {
 
 	public string enemyTag = "Enemy";
 	public GameObject bulletPrefab;
+	public GameObject missilePrefab;
 	public Transform firePoint;
 
 
@@ -113,7 +117,14 @@ public class Turret : MonoBehaviour {
 		{
 			if (fireCountDown <= 0f)
 			{
-				Shoot();
+				if (isMissile)
+				{
+					ShootMissle();
+				}
+				else
+				{
+					Shoot();
+				}
 				fireCountDown = 1f / fireRate;
 			}
 
@@ -169,6 +180,24 @@ public class Turret : MonoBehaviour {
 		}
 	}
 
+	void ShootMissle()
+	{
+		GameObject missileGo = (GameObject)Instantiate(missilePrefab, firePoint.position, firePoint.rotation);
+		Missile missile = missileGo.GetComponent<Missile>();
+
+		if (missile != null)
+		{
+
+			missile.damage = damage;
+
+			missile.Seek(target);
+
+		}
+	}
+
+	/// <summary>
+	/// Draw range for turrets in game scene
+	/// </summary>
 	private void OnDrawGizmosSelected()
 	{
 		Gizmos.color = Color.red;
