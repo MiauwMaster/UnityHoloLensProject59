@@ -49,16 +49,21 @@ public class Turret : MonoBehaviour {
         upgradedFireRate = fireRate * fireRateMultiplier;
 	}
 	
+    /// <summary>
+    /// update the target
+    /// </summary>
 	void UpdateTarget()
 	{
+        //Check if the turrt is upgraded
         IsUpgraded();
 
+        //Find all enemies and store them in an array
 		GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
 
 		float shortestDistance = Mathf.Infinity;
 		GameObject nearestEnemy = null;
 
-
+        //Find the closest enemy
 		foreach(GameObject enemy in enemies)
 		{
 			float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
@@ -69,10 +74,13 @@ public class Turret : MonoBehaviour {
 			}
 		}
 
+        //Set the nearest enemy as target
 		if(nearestEnemy != null && shortestDistance <= range)
 		{
 			target = nearestEnemy.transform;
 		}
+
+        //If there are no enemies, target is null.
 		else
 		{
 			target = null;
@@ -80,6 +88,7 @@ public class Turret : MonoBehaviour {
 	}
 
 	void Update () {
+        //If target is null, and turret is a laser, disable line renderer
 		if (target == null)
 		{
 			if (useLaser)
@@ -92,12 +101,16 @@ public class Turret : MonoBehaviour {
 			return;
 		}
 
+        //Lock on to the target
 		LockOnTarget();
 
+        //If it's a laser, use the laser
 		if (useLaser)
 		{
 			Laser();
 		}
+
+        //Else shoot bullets
 		else
 		{
 			if (fireCountDown <= 0f)
@@ -113,6 +126,9 @@ public class Turret : MonoBehaviour {
 
 	}
 
+    /// <summary>
+    /// Lock onto the target
+    /// </summary>
 	void LockOnTarget()
 	{
 		Vector3 dir = target.position - transform.position;
@@ -121,6 +137,9 @@ public class Turret : MonoBehaviour {
 		partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
 	}
 
+    /// <summary>
+    /// Shoot the laser
+    /// </summary>
 	void Laser()
 	{
 		if (!lineRenderer.enabled)
@@ -130,6 +149,9 @@ public class Turret : MonoBehaviour {
 		lineRenderer.SetPosition(1, target.position);
 	}
 
+    /// <summary>
+    /// Shoot bullets and play the bullet sound
+    /// </summary>
 	void Shoot()
 	{
 		GameObject bulletGo = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
@@ -164,6 +186,9 @@ public class Turret : MonoBehaviour {
 		Gizmos.DrawWireSphere(transform.position, range);
 	}
 
+    /// <summary>
+    /// check if the turret is upgraded and upgrade it
+    /// </summary>
     void IsUpgraded()
     {
         if (upgraded)

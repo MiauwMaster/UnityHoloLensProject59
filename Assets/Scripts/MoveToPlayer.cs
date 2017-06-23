@@ -16,16 +16,21 @@ public class MoveToPlayer : MonoBehaviour
 
     void Update()
     {
+        //If the enemy has a target
         if (target != null)
         {
+            //Move towards the position of the player
             float step = speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
+            //If enemy reaches the player
             if (transform.position == target.position)
             {
+                //Lose player life by the amount of damage the enemy does. 
                 Camera.main.GetComponent<Player>().LoseLife(GetComponent<Enemy>().damage);
-                //GetComponent<Enemy>().Die();
+                //Destroy the enemy
                 Destroy(gameObject);
+                //Set target to null
                 target = null;
             }
 

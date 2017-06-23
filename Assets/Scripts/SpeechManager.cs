@@ -12,12 +12,15 @@ public class SpeechManager : MonoBehaviour
     public GameObject laserTurret, gunTurret, missileTurret;
     [SerializeField]
     private GUIturret guiCannon, guiMissile, guiLaser;
+    [SerializeField]
+    private PauseScreen pause;
 
  //   public GUIturret guilaser;
 
     // Use this for initialization
     void Start()
 	{
+        //Keyword to select the laser turret
         keywords.Add("Laser", () =>
         {
             GetComponent<BuildTurrets>().turret = laserTurret;
@@ -27,6 +30,7 @@ public class SpeechManager : MonoBehaviour
             guiMissile.MakeInvisible();
         });
 
+        //Keyword to select the cannon turret
         keywords.Add("Cannon", () =>
         {
             GetComponent<BuildTurrets>().turret = gunTurret;
@@ -35,6 +39,7 @@ public class SpeechManager : MonoBehaviour
             guiMissile.MakeInvisible();
         });
 
+        //Keyword to select the missile turret
         keywords.Add("Missile", () =>
         {
             GetComponent<BuildTurrets>().turret = missileTurret;
@@ -43,12 +48,26 @@ public class SpeechManager : MonoBehaviour
             guiMissile.MakeVisible();
         });
 
+        //Keyword to upgrade the cannon turrets
         keywords.Add("Upgrade cannons", () =>
         {
             GetComponent<UpgradeTurrets>().UpgradeTurret();
             guiLaser.MakeInvisible();
             guiCannon.MakeInvisible();
             guiMissile.MakeInvisible();
+        });
+
+        keywords.Add("Pause", () =>
+        {
+            pause.Pause();
+        });
+        keywords.Add("Continue", () =>
+        {
+            pause.Continue();
+        });
+        keywords.Add("Restart", () =>
+        {
+            pause.Restart();
         });
         
 

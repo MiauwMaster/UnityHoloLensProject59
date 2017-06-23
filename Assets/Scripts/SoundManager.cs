@@ -24,7 +24,10 @@ public class SoundManager : MonoBehaviour {
 		}
 	}
 
-
+    /// <summary>
+    /// Play sound
+    /// </summary>
+    /// <param name="name">Name of the sound you want to play</param>
 	public void Play (string name)
 	{
 		Sound s = Array.Find(Sounds, sound => sound.name == name);

@@ -12,13 +12,18 @@ public class Player : MonoBehaviour
     public Text moneyText;
     public Text livesText;
 
-    // Use this for initialization
-
+    /// <summary>
+    /// Add money to the player
+    /// </summary>
+    /// <param name="amount">amount of money</param>
     public void AddMoney(int amount)
     {
         money += amount;
     }
-
+    /// <summary>
+    /// Remove money from the player
+    /// </summary>
+    /// <param name="amount">amount of money</param>
     public void LoseMoney(int amount)
     {
         if (amount > money)
@@ -34,6 +39,10 @@ public class Player : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Lower the life (hp) of the player
+    /// </summary>
+    /// <param name="life">anount of lives to remove</param>
     public void LoseLife(int life)
     {
         health -= life;
@@ -50,6 +59,9 @@ public class Player : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Death of the player
+    /// </summary>
     void Die()
     {
         isAlive = false;
