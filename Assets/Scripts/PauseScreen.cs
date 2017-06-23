@@ -39,7 +39,7 @@ public class PauseScreen : MonoBehaviour {
     {
         if (SceneManager.GetActiveScene().name == "GameOver" || pausecanvas.gameObject.activeInHierarchy)
         {
-            SceneManager.LoadScene(torestart.name);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }
