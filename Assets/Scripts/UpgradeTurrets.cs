@@ -52,9 +52,8 @@ public class UpgradeTurrets : MonoBehaviour {
                 turret.tag = "UpgradedTurret";
                 // remove the moneys
                 Camera.main.GetComponent<Player>().LoseMoney(upgradePrice);
-                // and remove from the list.
-                nonUpgradedTurrets.Remove(turret);
             }
+            nonUpgradedTurrets.Clear();
         }
 
     }    
