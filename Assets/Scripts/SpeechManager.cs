@@ -12,6 +12,8 @@ public class SpeechManager : MonoBehaviour
     public GameObject laserTurret, gunTurret, missileTurret;
     [SerializeField]
     private GUIturret guiCannon, guiMissile, guiLaser;
+    [SerializeField]
+    private PauseScreen pause;
 
  //   public GUIturret guilaser;
 
@@ -53,6 +55,19 @@ public class SpeechManager : MonoBehaviour
             guiLaser.MakeInvisible();
             guiCannon.MakeInvisible();
             guiMissile.MakeInvisible();
+        });
+
+        keywords.Add("Pause", () =>
+        {
+            pause.Pause();
+        });
+        keywords.Add("Continue", () =>
+        {
+            pause.Continue();
+        });
+        keywords.Add("Restart", () =>
+        {
+            pause.Restart();
         });
         
 
