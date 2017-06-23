@@ -25,7 +25,6 @@ public class Missile : MonoBehaviour {
 		if (target == null)
 		{
 			Destroy(gameObject);
-			FindObjectOfType<SoundManager>().Play("MissileExplode");
 			return;
 		}
 
@@ -52,8 +51,9 @@ public class Missile : MonoBehaviour {
 	void HitTarget()
 	{
 		target.GetComponent<Enemy>().LoseLife(damage);
+        FindObjectOfType<SoundManager>().Play("MissileExplode");
 
-		Destroy(gameObject);
+        Destroy(gameObject);
 	}
 
 	#endregion

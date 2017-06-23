@@ -145,7 +145,10 @@ public class Turret : MonoBehaviour {
 
 		lineRenderer.SetPosition(0, firePoint.position);
 		lineRenderer.SetPosition(1, target.position);
-	}
+
+        target.GetComponent<MoveToPlayer>().speed /= slowingAmount;
+        FindObjectOfType<SoundManager>().Play("LaserSound");
+    }
 
     /// <summary>
     /// Shoot bullets and play the bullet sound
@@ -164,12 +167,6 @@ public class Turret : MonoBehaviour {
 			bullet.Seek(target);
 			
 		}
-
-        if (useLaser)
-			{
-				target.GetComponent<MoveToPlayer>().speed /= slowingAmount;
-				FindObjectOfType<SoundManager>().Play("LaserSound");
-			}
 	}
 
 	private void OnDrawGizmosSelected()
