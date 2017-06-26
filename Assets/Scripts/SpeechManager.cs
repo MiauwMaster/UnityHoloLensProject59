@@ -54,24 +54,30 @@ public class SpeechManager : MonoBehaviour
             GetComponent<UpgradeTurrets>().UpgradeTurret();
         });
 
+        //Call a pause
         keywords.Add("Give me a break", () =>
         {
             pause.Pause();
         });
+
+        //Continue the game
         keywords.Add("Continue", () =>
         {
             pause.Continue();
         });
+
+        //Restart this scene
         keywords.Add("Restart", () =>
         {
             pause.Restart();
         });
+
+        //The Sims throwback.
         keywords.Add("Motherload", () =>
         {
             Camera.main.GetComponent<Player>().AddMoney(10000);
         });
-
-
+        
         // Tell the KeywordRecognizer about our keywords.
         keywordRecognizer = new KeywordRecognizer(keywords.Keys.ToArray());
 

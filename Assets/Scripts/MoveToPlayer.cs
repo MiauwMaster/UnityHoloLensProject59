@@ -26,7 +26,7 @@ public class MoveToPlayer : MonoBehaviour
             //If enemy reaches the player
             if (transform.position == target.position)
             {
-                //Lose player life by the amount of damage the enemy does. 
+                //Lose player life by the amount of gunDamage the enemy does. 
                 Camera.main.GetComponent<Player>().LoseLife(GetComponent<Enemy>().damage);
                 //Destroy the enemy
                 Destroy(gameObject);

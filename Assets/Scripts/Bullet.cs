@@ -46,7 +46,7 @@ public class Bullet : MonoBehaviour {
 	}
 
     /// <summary>
-    /// Deal damage to the target and destroy bullet
+    /// Deal gunDamage to the target and destroy bullet
     /// </summary>
 	void HitTarget()
 	{

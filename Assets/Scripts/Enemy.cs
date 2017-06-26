@@ -30,9 +30,9 @@ public class Enemy : MonoBehaviour {
     }
 
     /// <summary>
-    /// Deal damage to the enemy
+    /// Deal gunDamage to the enemy
     /// </summary>
-    /// <param name="life">the amount of damage this enemy takes</param>
+    /// <param name="life">the amount of gunDamage this enemy takes</param>
     public void LoseLife(float life)
     {
         health -= life;
