@@ -8,19 +8,19 @@ public class Turret : MonoBehaviour {
 	[Header("General")]
 	public float range = 15f;
     public int price;
-	public bool useCannon = false;
 
-	[Header("Bullets Default")]
-	public float fireRate = 1f;
-    public float damage = 1;
+	[Header("Gun")]
+	public float gunFireRate = 1f;
+    public float gunDamage = 1;
+    public bool useCannon = false;
 
     [Header("Ugrades")]
     public float fireRateMultiplier;
-    float upgradedFireRate;
     public float upgradedDamage;
+    public bool upgraded = false;
 
+    float upgradedFireRate;
     private float fireCountDown = 0f;
-	public bool upgraded = false;
 
 	[Header("laser")]
 	public bool useLaser = false;
@@ -30,6 +30,7 @@ public class Turret : MonoBehaviour {
 	[Header("Missile")]
 	public bool isMissile = false;
     public float missileDamage = 10;
+    public float missileFireRate = 0.2f;
 
 
 	[Header("Unity Setup!")]
@@ -49,7 +50,7 @@ public class Turret : MonoBehaviour {
 	
 	void Start () {
 		InvokeRepeating("UpdateTarget", 0f, 0.5f);
-        upgradedFireRate = fireRate * fireRateMultiplier;
+        upgradedFireRate = gunFireRate * fireRateMultiplier;
 	}
 	
     /// <summary>
@@ -57,9 +58,6 @@ public class Turret : MonoBehaviour {
     /// </summary>
 	void UpdateTarget()
 	{
-        //Check if the turrt is upgraded
-        IsUpgraded();
-
         //Find all enemies and store them in an array
 		GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
 
@@ -90,9 +88,13 @@ public class Turret : MonoBehaviour {
 		}
 	}
 
-	void Update () {
+	void Update ()
+    {
+        //Check if the turret is upgraded
+        IsUpgraded();
+
         //If target is null, and turret is a laser, disable line renderer
-		if (target == null)
+        if (target == null)
 		{
 			if (useLaser)
 			{
@@ -107,33 +109,37 @@ public class Turret : MonoBehaviour {
         //Lock on to the target
 		LockOnTarget();
 
-        //If it's a laser, use the laser
+        //If the turret is a laser, use the laser
 		if (useLaser)
 		{
 			Laser();
-		}
+            if(lineRenderer.enabled == true)
+            {
+                FindObjectOfType<SoundManager>().Play("LaserSound");
+            }
+        }
 
-        //Else shoot bullets
 		else
 		{
 			if (fireCountDown <= 0f)
 			{
+                //Shoot missile if the turret is a gun turret 
 				if (isMissile)
 				{
 					ShootMissle();
-				}
-				else
+                    fireCountDown = 1f / missileFireRate;
+                }
+                //If turret is a cannon, shoot bullets.
+				else if(useCannon)
 				{
 					Shoot();
-				}
-				fireCountDown = 1f / fireRate;
+                    fireCountDown = 1f / gunFireRate;
+                }
+				
 			}
 
 			fireCountDown -= Time.deltaTime;
 		}
-
-
-
 	}
 
     /// <summary>
@@ -159,7 +165,6 @@ public class Turret : MonoBehaviour {
 		lineRenderer.SetPosition(1, target.position);
 
         target.GetComponent<MoveToPlayer>().speed /= slowingAmount;
-        FindObjectOfType<SoundManager>().Play("LaserSound");
     }
 
     /// <summary>
@@ -173,7 +178,7 @@ public class Turret : MonoBehaviour {
 		if(bullet != null)
 		{
 
-            bullet.damage = damage;
+            bullet.damage = gunDamage;
 			FindObjectOfType<SoundManager>().Play("GunSound");
 
 			bullet.Seek(target);
@@ -212,8 +217,8 @@ public class Turret : MonoBehaviour {
     {
         if (upgraded)
         {
-            fireRate = upgradedFireRate;
-            damage = upgradedDamage;
+            gunFireRate = upgradedFireRate;
+            gunDamage = upgradedDamage;
         }
     }
 	#endregion

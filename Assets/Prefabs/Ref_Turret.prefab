@@ -267,17 +267,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 15
   price: 5
-  fireRate: 1
-  damage: 1
+  gunFireRate: 1
+  gunDamage: 1
+  useCannon: 1
   fireRateMultiplier: 4
   upgradedDamage: 0.5
   upgraded: 0
   useLaser: 0
   slowingAmount: 1
   lineRenderer: {fileID: 0}
+  isMissile: 0
+  missileDamage: 10
+  missileFireRate: 0.2
   turnSpeed: 10
   partToRotate: {fileID: 4768777770828690}
   enemyTag: Enemy
   bulletPrefab: {fileID: 1114500875926168, guid: e2b189150e65c374588b4f825a2af3d0,
     type: 2}
+  missilePrefab: {fileID: 0}
   firePoint: {fileID: 4472069724671816}
