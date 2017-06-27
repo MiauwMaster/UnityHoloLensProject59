@@ -225,13 +225,7 @@ MonoBehaviour:
   waveComps:
   - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
       type: 2}
-    num: 15
-  - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
-      type: 2}
-    num: 1
-  - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
-      type: 2}
-    num: 2
+    num: 10
   - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
       type: 2}
     num: 2
@@ -280,16 +274,16 @@ MonoBehaviour:
   waveComps:
   - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
       type: 2}
-    num: 3
+    num: 10
   - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
       type: 2}
-    num: 7
+    num: 2
   - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
       type: 2}
-    num: 3
+    num: 10
   - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
       type: 2}
-    num: 7
+    num: 2
 --- !u!1 &121938705
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,16 +329,16 @@ MonoBehaviour:
   waveComps:
   - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
       type: 2}
-    num: 3
+    num: 10
   - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
       type: 2}
-    num: 7
+    num: 2
   - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
       type: 2}
-    num: 3
+    num: 10
   - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
       type: 2}
-    num: 7
+    num: 2
 --- !u!1 &178096686
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,13 +599,7 @@ MonoBehaviour:
   waveComps:
   - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
       type: 2}
-    num: 15
-  - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
-      type: 2}
-    num: 1
-  - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
-      type: 2}
-    num: 2
+    num: 10
   - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
       type: 2}
     num: 2
@@ -660,16 +648,16 @@ MonoBehaviour:
   waveComps:
   - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
       type: 2}
-    num: 3
+    num: 10
   - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
       type: 2}
-    num: 7
+    num: 2
   - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
       type: 2}
-    num: 3
+    num: 10
   - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
       type: 2}
-    num: 7
+    num: 2
 --- !u!1 &414278650
 GameObject:
   m_ObjectHideFlags: 0
@@ -715,7 +703,7 @@ MonoBehaviour:
   waveComps:
   - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
       type: 2}
-    num: 20
+    num: 10
 --- !u!1 &441606977
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,13 +749,7 @@ MonoBehaviour:
   waveComps:
   - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
       type: 2}
-    num: 15
-  - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
-      type: 2}
-    num: 1
-  - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
-      type: 2}
-    num: 2
+    num: 10
   - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
       type: 2}
     num: 2
@@ -1079,15 +1061,6 @@ MonoBehaviour:
     num: 10
   - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
       type: 2}
-    num: 1
-  - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
-      type: 2}
-    num: 4
-  - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
-      type: 2}
-    num: 3
-  - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
-      type: 2}
     num: 2
 --- !u!1 &838705957
 GameObject:
@@ -1134,7 +1107,7 @@ MonoBehaviour:
   waveComps:
   - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
       type: 2}
-    num: 20
+    num: 10
 --- !u!1 &896510136
 GameObject:
   m_ObjectHideFlags: 0
@@ -1221,7 +1194,7 @@ MonoBehaviour:
   waveComps:
   - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
       type: 2}
-    num: 20
+    num: 10
 --- !u!1 &1043430876
 GameObject:
   m_ObjectHideFlags: 0
@@ -1267,7 +1240,7 @@ MonoBehaviour:
   waveComps:
   - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
       type: 2}
-    num: 20
+    num: 10
 --- !u!1 &1090958105
 GameObject:
   m_ObjectHideFlags: 0
@@ -1313,7 +1286,7 @@ MonoBehaviour:
   waveComps:
   - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
       type: 2}
-    num: 18
+    num: 10
   - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
       type: 2}
     num: 2
@@ -1362,16 +1335,16 @@ MonoBehaviour:
   waveComps:
   - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
       type: 2}
-    num: 3
+    num: 10
   - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
       type: 2}
-    num: 7
+    num: 2
   - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
       type: 2}
-    num: 3
+    num: 10
   - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
       type: 2}
-    num: 7
+    num: 2
 --- !u!1 &1101035005
 GameObject:
   m_ObjectHideFlags: 0
@@ -1417,7 +1390,7 @@ MonoBehaviour:
   waveComps:
   - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
       type: 2}
-    num: 20
+    num: 10
 --- !u!1 &1103981898
 GameObject:
   m_ObjectHideFlags: 0
@@ -1463,13 +1436,7 @@ MonoBehaviour:
   waveComps:
   - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
       type: 2}
-    num: 15
-  - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
-      type: 2}
-    num: 1
-  - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
-      type: 2}
-    num: 2
+    num: 10
   - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
       type: 2}
     num: 2
@@ -1636,16 +1603,16 @@ MonoBehaviour:
   waveComps:
   - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
       type: 2}
-    num: 3
+    num: 10
   - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
       type: 2}
-    num: 7
+    num: 2
   - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
       type: 2}
-    num: 3
+    num: 10
   - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
       type: 2}
-    num: 7
+    num: 2
 --- !u!1 &1172798993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1691,16 +1658,16 @@ MonoBehaviour:
   waveComps:
   - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
       type: 2}
-    num: 3
+    num: 10
   - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
       type: 2}
-    num: 7
+    num: 2
   - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
       type: 2}
-    num: 3
+    num: 10
   - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
       type: 2}
-    num: 7
+    num: 2
 --- !u!1 &1202767622
 GameObject:
   m_ObjectHideFlags: 0
@@ -1818,16 +1785,16 @@ MonoBehaviour:
   waveComps:
   - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
       type: 2}
-    num: 3
+    num: 10
   - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
       type: 2}
-    num: 7
+    num: 2
   - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
       type: 2}
-    num: 3
+    num: 10
   - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
       type: 2}
-    num: 7
+    num: 2
 --- !u!1 &1281935840
 GameObject:
   m_ObjectHideFlags: 0
@@ -1873,13 +1840,7 @@ MonoBehaviour:
   waveComps:
   - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
       type: 2}
-    num: 15
-  - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
-      type: 2}
-    num: 1
-  - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
-      type: 2}
-    num: 2
+    num: 10
   - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
       type: 2}
     num: 2
@@ -1928,7 +1889,7 @@ MonoBehaviour:
   waveComps:
   - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
       type: 2}
-    num: 20
+    num: 10
 --- !u!1 &1445520182
 GameObject:
   m_ObjectHideFlags: 0
@@ -1974,16 +1935,16 @@ MonoBehaviour:
   waveComps:
   - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
       type: 2}
-    num: 3
+    num: 10
   - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
       type: 2}
-    num: 7
+    num: 2
   - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
       type: 2}
-    num: 3
+    num: 10
   - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
       type: 2}
-    num: 7
+    num: 2
 --- !u!1 &1482835451
 GameObject:
   m_ObjectHideFlags: 0
@@ -2066,7 +2027,7 @@ MonoBehaviour:
   waveComps:
   - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
       type: 2}
-    num: 20
+    num: 10
 --- !u!1 &1540889211
 GameObject:
   m_ObjectHideFlags: 0
@@ -2406,7 +2367,7 @@ MonoBehaviour:
   waveComps:
   - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
       type: 2}
-    num: 20
+    num: 10
 --- !u!1 &1792250884
 GameObject:
   m_ObjectHideFlags: 0
@@ -2452,13 +2413,7 @@ MonoBehaviour:
   waveComps:
   - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
       type: 2}
-    num: 15
-  - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
-      type: 2}
-    num: 1
-  - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
-      type: 2}
-    num: 2
+    num: 10
   - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
       type: 2}
     num: 2
@@ -2713,16 +2668,16 @@ MonoBehaviour:
   waveComps:
   - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
       type: 2}
-    num: 3
+    num: 10
   - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
       type: 2}
-    num: 7
+    num: 2
   - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
       type: 2}
-    num: 3
+    num: 10
   - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
       type: 2}
-    num: 7
+    num: 2
 --- !u!1 &2014534540
 GameObject:
   m_ObjectHideFlags: 0
@@ -2768,13 +2723,7 @@ MonoBehaviour:
   waveComps:
   - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
       type: 2}
-    num: 15
-  - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
-      type: 2}
-    num: 1
-  - enemyPrefab: {fileID: 1786963159395922, guid: 4392fa5be0518cc4b89973c262990c16,
-      type: 2}
-    num: 2
+    num: 10
   - enemyPrefab: {fileID: 1799829941962194, guid: 5f95038db3614a5459a4cb0c6fda4947,
       type: 2}
     num: 2
