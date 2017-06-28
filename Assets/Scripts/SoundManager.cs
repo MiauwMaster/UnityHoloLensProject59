@@ -8,10 +8,13 @@ public class SoundManager : MonoBehaviour {
 	public Sound[] Sounds;
 	#endregion
 
+	public static SoundManager instance;
 
 	#region Unity Methods
 	void Awake()
 	{
+		instance = this;
+
 		foreach(Sound s in Sounds)
 		{
 			s.source = gameObject.AddComponent<AudioSource>();

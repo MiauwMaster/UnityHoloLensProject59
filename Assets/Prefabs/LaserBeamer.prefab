@@ -266,20 +266,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9fc8c23bd05ce34ebe07f05a83cbf83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 20
+  range: 10
   price: 10
-  fireRate: 1
-  startDamage: 0
-  endDamage: 0
-  upgradedLvl: 1
-  testUpgrade: 0
+  gunFireRate: 1
+  gunDamage: 1
+  useCannon: 0
+  fireRateMultiplier: 0
+  upgradedDamage: 0
+  upgraded: 0
   useLaser: 1
-  slowingAmount: 2
   lineRenderer: {fileID: 120430976876642906}
+  isMissile: 0
+  missileDamage: 10
+  missileFireRate: 0.2
   turnSpeed: 10
   partToRotate: {fileID: 4583423092376600}
   enemyTag: Enemy
   bulletPrefab: {fileID: 0}
+  missilePrefab: {fileID: 0}
   firePoint: {fileID: 4205198215823928}
 --- !u!120 &120430976876642906
 LineRenderer:
@@ -318,7 +322,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 2
-    widthMultiplier: 0.03
+    widthMultiplier: 0.01
     widthCurve:
       serializedVersion: 2
       m_Curve:

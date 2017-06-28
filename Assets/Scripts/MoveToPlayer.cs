@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -28,10 +28,8 @@ public class MoveToPlayer : MonoBehaviour
             {
                 //Lose player life by the amount of gunDamage the enemy does. 
                 Camera.main.GetComponent<Player>().LoseLife(GetComponent<Enemy>().damage);
-                //Destroy the enemy
-                Destroy(gameObject);
-                //Set target to null
-                target = null;
+				//Destroy the enemy
+				Destroy(gameObject);
             }
 
         }

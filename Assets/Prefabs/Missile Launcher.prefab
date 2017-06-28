@@ -251,19 +251,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9fc8c23bd05ce34ebe07f05a83cbf83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 15
+  range: 12
   price: 20
+  gunFireRate: 1
+  gunDamage: 1
   useCannon: 0
-  fireRate: 0.2
-  damage: 1
   fireRateMultiplier: 0
   upgradedDamage: 0
   upgraded: 0
   useLaser: 0
-  slowingAmount: 0
   lineRenderer: {fileID: 0}
   isMissile: 1
   missileDamage: 15
+  missileFireRate: 0.2
   turnSpeed: 10
   partToRotate: {fileID: 4258593274984768}
   enemyTag: Enemy

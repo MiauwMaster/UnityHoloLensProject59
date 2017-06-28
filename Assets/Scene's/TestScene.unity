@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2239,47 +2239,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 23742915392390804, guid: 489342aa598ea92448fbb2b30fab7a57,
+    - target: {fileID: 114426047285964778, guid: 489342aa598ea92448fbb2b30fab7a57,
         type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4878870944496050, guid: 489342aa598ea92448fbb2b30fab7a57, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4878870944496050, guid: 489342aa598ea92448fbb2b30fab7a57, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 4878870944496050, guid: 489342aa598ea92448fbb2b30fab7a57, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114779495833626722, guid: 489342aa598ea92448fbb2b30fab7a57,
-        type: 2}
-      propertyPath: gunTurret
+      propertyPath: turretText
       value: 
-      objectReference: {fileID: 1969505311601122, guid: ae2cd9438bef2c540b09d658dd7edabd,
-        type: 2}
-    - target: {fileID: 114779495833626722, guid: 489342aa598ea92448fbb2b30fab7a57,
-        type: 2}
-      propertyPath: laserTurret
-      value: 
-      objectReference: {fileID: 1917972570874120, guid: 1e8d309ab05c0c645ab268b951d63e36,
-        type: 2}
-    - target: {fileID: 114267380114311758, guid: 489342aa598ea92448fbb2b30fab7a57,
-        type: 2}
-      propertyPath: buildEffect
-      value: 
-      objectReference: {fileID: 1183182228150980, guid: 7111ca540d3aaa94788fb5f77f6da579,
-        type: 2}
-    - target: {fileID: 114779495833626722, guid: 489342aa598ea92448fbb2b30fab7a57,
-        type: 2}
-      propertyPath: missileTurret
-      value: 
-      objectReference: {fileID: 1815149192616160, guid: d43ae7eb9aae0874aa789b59ff9efe49,
-        type: 2}
+      objectReference: {fileID: 2084074630}
     - target: {fileID: 114779495833626722, guid: 489342aa598ea92448fbb2b30fab7a57,
         type: 2}
       propertyPath: guiCannon
@@ -2287,14 +2251,14 @@ Prefab:
       objectReference: {fileID: 604768612}
     - target: {fileID: 114779495833626722, guid: 489342aa598ea92448fbb2b30fab7a57,
         type: 2}
-      propertyPath: guiLaser
-      value: 
-      objectReference: {fileID: 604768611}
-    - target: {fileID: 114779495833626722, guid: 489342aa598ea92448fbb2b30fab7a57,
-        type: 2}
       propertyPath: guiMissile
       value: 
       objectReference: {fileID: 604768610}
+    - target: {fileID: 114779495833626722, guid: 489342aa598ea92448fbb2b30fab7a57,
+        type: 2}
+      propertyPath: guiLaser
+      value: 
+      objectReference: {fileID: 604768611}
     - target: {fileID: 114779495833626722, guid: 489342aa598ea92448fbb2b30fab7a57,
         type: 2}
       propertyPath: pause
@@ -2303,25 +2267,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 489342aa598ea92448fbb2b30fab7a57, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1627588677 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1315696951131234, guid: 489342aa598ea92448fbb2b30fab7a57,
-    type: 2}
-  m_PrefabInternal: {fileID: 1627588676}
---- !u!114 &1627588678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1627588677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52a6687ac7d90304599269a5dc36aba6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nonUpgradedTurrets: []
-  upgradePrice: 5
-  turretText: {fileID: 2084074630}
 --- !u!1 &1727422962
 GameObject:
   m_ObjectHideFlags: 0

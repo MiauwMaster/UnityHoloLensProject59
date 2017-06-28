@@ -1,10 +1,11 @@
 using UnityEngine;
+using System.Collections;
 
 public class Turret : MonoBehaviour {
 
 	#region Variables
 	private Transform target;
-	
+
 	[Header("General")]
 	public float range = 15f;
     public int price;
@@ -24,8 +25,9 @@ public class Turret : MonoBehaviour {
 
 	[Header("laser")]
 	public bool useLaser = false;
-	public float slowingAmount;
+	private float slowingAmount = 2f;
 	public LineRenderer lineRenderer;
+	private float oldSpeed = 1.5f;
 
 	[Header("Missile")]
 	public bool isMissile = false;
@@ -78,7 +80,20 @@ public class Turret : MonoBehaviour {
         //Set the nearest enemy as target
 		if(nearestEnemy != null && shortestDistance <= range)
 		{
+			bool newTarget = false;
+			if(useLaser && target != nearestEnemy)
+			{
+				newTarget = true;
+				if (target != null)
+					target.GetComponent<MoveToPlayer>().speed /= oldSpeed; //resetting speed when target changes
+			}
+
 			target = nearestEnemy.transform;
+
+			if(useLaser && newTarget)
+			{
+				target.GetComponent<MoveToPlayer>().speed /= slowingAmount; //slow new target
+			}
 		}
 
         //If there are no enemies, target is null.
@@ -115,7 +130,7 @@ public class Turret : MonoBehaviour {
 			Laser();
             if(lineRenderer.enabled == true)
             {
-                FindObjectOfType<SoundManager>().Play("LaserSound");
+				SoundManager.instance.Play("LaserSound");
             }
         }
 
@@ -153,19 +168,26 @@ public class Turret : MonoBehaviour {
 		partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
 	}
 
-    /// <summary>
-    /// Shoot the laser
-    /// </summary>
+	/// <summary>
+	/// Shoot the laser
+	/// </summary>
+
+	float time = 0;
 	void Laser()
 	{
 		if (!lineRenderer.enabled)
+		{
 			lineRenderer.enabled = true;
-
+		}
+		
 		lineRenderer.SetPosition(0, firePoint.position);
 		lineRenderer.SetPosition(1, target.position);
 
-        target.GetComponent<MoveToPlayer>().speed /= slowingAmount;
-    }
+		if (!lineRenderer.enabled)
+		{
+			//target.GetComponent<MoveToPlayer>().speed = oldSpeed;
+		}
+	}
 
     /// <summary>
     /// Shoot bullets and play the bullet sound
